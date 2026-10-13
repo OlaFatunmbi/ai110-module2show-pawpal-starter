@@ -45,7 +45,21 @@ pip install -r requirements.txt
 ## 🖥️ Sample Output
 
 Paste a sample of your app's CLI or Streamlit output here so a reader can see what a generated plan looks like:
+==============================================================
+TODAY'S SCHEDULE for Jordan
+Time used: 70 of 75 minutes
+==============================================================
+Time   Pet      Task                Length   Priority
+  ----------------------------------------------------------
+07:30  Mochi    Breakfast           10 min   High
+08:00  Biscuit  Morning walk        30 min   High
+09:00  Mochi    Give medication     5 min    High
+17:00  Mochi    Play session        25 min   Medium
 
+Skipped:
+- Biscuit: Evening walk (needs 30 min but only 5 min left)
+- Biscuit: Brush coat (needs 20 min but only 5 min left)
+==============================================================
 ```
 # e.g.:
 # Daily plan for Biscuit (Golden Retriever):
@@ -67,7 +81,16 @@ pytest --cov
 Sample test output:
 
 ```
-# Paste your pytest output here
+============================================================================ test session starts =============================================================================
+platform darwin -- Python 3.9.6, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/ola/Desktop/ai110-module2show-pawpal-starter
+plugins: cov-7.1.0
+collected 2 items                                                                                                                                                            
+
+tests/test_pawpal.py ..                                                                                                                                                [100%]
+
+============================================================================= 2 passed in 0.07s ==============================================================================
+
 ```
 
 ## 📐 Smarter Scheduling
