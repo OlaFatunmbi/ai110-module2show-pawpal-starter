@@ -1,9 +1,16 @@
 classDiagram
+    class Priority {
+        <<enumeration>>
+        LOW
+        MEDIUM
+        HIGH
+    }
     class Task {
         +str title
         +int duration_minutes
-        +str priority
+        +Priority priority
         +str category
+        +str pet_name
         +bool completed
         +mark_complete()
         +is_high_priority() bool
@@ -27,6 +34,8 @@ classDiagram
     }
     class Scheduler {
         +Owner owner
+        +list~Task~ plan
+        +list skipped
         +generate_plan() list~Task~
         +explain_plan() str
         -_sort_tasks(tasks) list~Task~
@@ -34,4 +43,5 @@ classDiagram
 
 Owner "1" o-- "*" Pet : has
 Pet "1" o-- "*" Task : has
+Task --> Priority : has
 Scheduler --> Owner : uses

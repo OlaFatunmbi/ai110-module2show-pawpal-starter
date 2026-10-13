@@ -5,10 +5,15 @@
 **a. Initial design**
 
 - Briefly describe your initial UML design.
+  - The initial UML design basically have a class called Owner in which you can add any number of pets.
+  It also has a Pet class that allows you to describe what pet you along with a Schedule class to input the time and Task class.
 - What classes did you include, and what responsibilities did you assign to each?
+  - I included a Task class which holds the name, duration, and priority. Also Pet class which differentiates the name, age
+  and species. An Owner holds the name, availability, and a list of the pets. Finally the scheduler takes the Owner class and builds the plan.
 
 **b. Design changes**
-
+- I added a pet name to Task, so that we know which pet has which specific task, before it just put the tasks into one list.
+- Also changed the priority enum so that it matches along with the numbers.
 - Did your design change during implementation?
 - If yes, describe at least one change and why you made it.
 
